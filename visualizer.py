@@ -1,6 +1,5 @@
 from anytree import Node, RenderTree
 
-# Function to visualize the parse tree
 def visualize_parse_tree(parse_tree):
     root = Node("Root")
     build_tree(parse_tree, root)
@@ -21,6 +20,5 @@ def build_tree(parse_tree, parent_node):
         Node(str(parse_tree), parent=parent_node)
 
 if __name__ == "__main__":
-    # Example usage (replace with actual parsed tree)
-    parsed_result = ('+', 3, ('*', 5, ('-', 10, 2)))  # Example parse tree
+    parsed_result = ('+', 3, ('*', 5, ('-', 10, 2)))  
     visualize_parse_tree(parsed_result)
